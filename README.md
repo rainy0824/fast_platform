@@ -12,7 +12,7 @@
 #### 后台服务注意事项
     修改 config中db.py中的数据库连接地址
     使用alemic 来配置sqlalchemy,修改alembic.ini中的地址
-####运行
+#### 运行
     cd backend
     pip install -r requirements.txt
     python main.py
