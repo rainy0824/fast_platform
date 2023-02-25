@@ -1,0 +1,14 @@
+.DS_Store
+backend/alembic/versions
+backend/apps
+front/node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+tests/**/coverage/
+debug.log*
+.idea
+.vscode
+

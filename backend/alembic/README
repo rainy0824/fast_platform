@@ -1,0 +1,38 @@
+Generic single-database configuration.
+1.初始化根目录
+>alembic init alembic
+2.修改ablemic ini中的sqlalchemy.url
+3.修改env.py配置信息 添加如下数据
+import  os ,sys
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+from models.model_base import Base
+target_metadata=Base.metadata
+注释#target_metadata=None
+4. 自动生成执行文件
+alembic revision --autogenerate -m 'first commit'
+5.同步更新到数据库
+alembic upgrade head
+6.修改数据执行4.5
+7.操作
+# 更新数据库：
+
+alembic upgrade 版本号
+
+# 降级数据库：
+
+alembic downgrade 版本号
+
+# 更新到最初版：
+
+alembic downgrade base
+
+# 查看记录和历史
+
+alembic history
+
+#离线执行sql
+alembic upgrade <version> --sql > migration.sql
+
+
+
+
